@@ -2,6 +2,7 @@ import styled from '@mui/system/styled'
 import Ul from '@mui/material/Box'
 
 export const Nav = styled(Ul)(() => ({
+  width:'fit-content',
   display: 'flex',
   flexWrap: 'wrap',
   gridArea: 'nav',
@@ -9,5 +10,3 @@ export const Nav = styled(Ul)(() => ({
 }));
 
 export default Nav
-
-

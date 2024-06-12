@@ -1,16 +1,22 @@
-import React from 'react'
-import OuterBox from '../styles/Style.tsx' 
-import NavBar from './navBar.tsx'
-import SideBar from './sideBar.tsx'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Box } from '@mui/material';
+import NavBar from './navBar.tsx';
+import SideBar from './sideBar.tsx';
+import { WeatherParams } from '.././models/WeatherForecast.ts';
+import Weather from './Weather/Weather.tsx';
+
 const Index = () => {
+
   return (
-    <OuterBox>
-      <h1 style={{gridArea:'logo'}} >Logo</h1>
+    <>
       <NavBar/>
       <SideBar/>
-      <h1 style={{gridArea:'content',height:'100vh',border:'1px solid black'}} >content</h1>
-      <h1 style={{gridArea:'footer',border:'1px solid black'}} >footer</h1>
-      </OuterBox>
+      <Box sx={{gridArea:'content',height:'100vh' }} >
+       <Weather />
+
+      </Box>
+      </>
   )
 }
 
